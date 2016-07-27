@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Virtual Camoma</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+	<main>
+		<div id="pageIntro">
+			<div id="headerOff">
+				<h1>Virtual Camoma</h1>
+			</div>
+			<div id="login">
+				<h4>Connectez vous:</h4>
+				<form action="" id="loginForm">
+					<label for="loginUsername">Utilisateur</label>
+					<input class="inputText" type="text" name='loginUsername' id='loginUsername'><br>
+					<label for="loginPassword">Mot de passe</label>
+					<input class="inputText" type="password" name='loginPassword' id='loginPassword'>
+					<input type="submit" id='loginSubmit'>
+				</form>
+			</div>
+			<h3>Première visite?</h3>
+			<button id='logupButton'>S'enregistrer</button>
+			<div id="logup">
+				<h4>Enregistrez vous:</h4>
+				<form action="" id="logupForm">
+					<label for="logupUsername">Username</label>
+					<input class="inputText" type="text" name='logupUsername' id='logupUsername' required="required">
+					<label for="logupEmail">Email</label>
+					<input class="inputText" type="text" name='logupEmail' id='logupEmail' required="required">
+					<label for="logupPassword">Password</label>
+					<input class="inputText" type="password" name='logupPassword' id='logupPassword' required="required">
+					<input type="submit" id='logupSubmit'>
+				</form>
+			</div>
+		</div>
+		<div id="pageOn">
+			<div id="accueil">												<!-- ACCUEIL -->
+				<nav id="navAccueil">
+					<div class='menuBurguer' id="ajouteAccueil"><i class="fa fa-cloud-upload" aria-hidden="true"></i></div>
+					<div id="tchatAccueil"><i class="fa fa-comments" aria-hidden="true"></i></div>
+					<div class='menuBurguer' id="profilAccueil"><i class="fa fa-gear" aria-hidden="true"></i></div>
+				</nav>
+
+				<ul class="menuList" id='accueilAjouteList'>
+						<li class="menuListElement" id="photoBurguer">
+							<i class="fa fa-camera-retro" aria-hidden="true"></i> Image</li>
+						<li class="menuListElement" id="textBurguer">
+							<i class="fa fa-pencil" aria-hidden="true"></i> Post</li>
+				</ul>
+				<ul class="menuList" id='accueilProfilList'>
+						<li class="menuListElement" id="profilBurguer">
+							<i class="fa fa-user" aria-hidden="true"></i> Profil</li>
+						<li class="menuListElement" id="optionsBurguer">
+							<i class="fa fa-gear" aria-hidden="true"></i> Options</li>
+						<li class="menuListElement" id="deconnexBurguer">
+							<i class="fa fa-close" aria-hidden="true"></i> Fermer session</li>
+				</ul>
+				<ul class="menuList" id="optionsList">
+					<a href="../camoma/index.php" target="blank"><li class="menuListElement" id="webLink">
+							<i class="fa fa-desktop" aria-hidden="true"></i> Site Camoma</li></a>
+					<li class="menuListElement" id="rechargeButton">
+							<i class="fa fa-refresh" aria-hidden="true"></i> Raffraichir Posts</li>
+				</ul>
+
+				<div id="terrain">
+					<ul id='postList'>
+						
+					</ul>
+				</div>
+
+				<div class='footer' id="footerAccueil">
+					<div class="contentFooter">
+						<textarea id='accueilText'></textarea>
+						<div id='accueilSubmit'><i class="fa fa-send" aria-hidden="true"></i></div>
+					</div>
+				</div>		
+			</div>
+
+			<div id="pagePost">										    <!-- POST -->
+				<nav id="navPost">
+					<div id="sortirPost"><i class="fa fa-reply" aria-hidden="true"></i></div>
+				</nav>	
+				<div id="postContent">
+					<div id="postDonnees">
+						<div id="postUser"></div>
+						<div id="postDate"></div>
+					</div>
+					<div id="postText"></div>
+				</div>
+				<div id="postComments">
+					<h2>Commentaires</h2>
+					<button id="commenter">Commentez</button>	
+				</div>
+				<ul id="listComments">
+				</ul>
+				<div class='footer' id="footerPost">
+					<div class="contentFooter">
+						<textarea id='commentText'></textarea>
+						<div id='commentSubmit'><i class="fa fa-send" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="pageTchatFriends">									<!-- TCHAT USERS-->
+				<nav id="navTchatFriends">
+					<div id="sortirTchatFriends"><i class="fa fa-reply" aria-hidden="true"></i></div>
+					<div id="optionsTchat"><i class="fa fa-gear" aria-hidden="true"></i></div>
+					<div id="chercherUtilisateur"><i class="fa fa-search" aria-hidden="true"></i></div>
+				</nav>
+				<div id="terrainFriends">
+					<ul id="connectedList">
+						
+					</ul>
+					<ul id="friendList">
+						
+					</ul>
+				</div>
+			</div>
+
+			<div id="pageTchat">											<!-- TCHAT -->
+				<nav id="navTchat">
+					<div id="nomTchat"></div>
+					<div id="sortirTchat"><i class="fa fa-reply" aria-hidden="true"></i></div>
+				</nav>
+				<ul id="tchatList">
+				
+				</ul>
+				<div class="footer" id='footerTchat'>
+					<div class="contentFooter">
+						<input type="text" name='tchatText' id='tchatText'>
+						<div id='tchatSubmit'><i class="fa fa-send" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="pageTchatGroup">											<!-- TCHAT GRUPAL-->
+				<nav id="navTchatGroup">
+					<div id="nomTchatGroup">Group</div>
+					<div id="sortirTchatGroup"><i class="fa fa-reply" aria-hidden="true"></i></div>
+				</nav>
+				<ul id="tchatGroupList">
+				
+				</ul>
+				<div class="footer" id='footerTchatGroup'>
+					<div class="contentFooter">
+						<input type="text" name='tchatGroupText' id='tchatGroupText'>
+						<div id='tchatGroupSubmit'><i class="fa fa-send" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+																			<!-- PROFIL -->
+			<div id="pageProfil">
+				
+			</div>
+		
+		</div>
+	</main>
+	<script src="jquery.js"></script>
+	<script src="user.js"></script>
+	<script src="fichier.js"></script>
+	<script src="comment.js"></script>
+	<script src="friend.js"></script>
+	<script src="index.js"></script>
+	<script src="socket.io.js"></script>
+</body>
+</html>
